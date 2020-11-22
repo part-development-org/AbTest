@@ -73,8 +73,7 @@ namespace TheProxor.AbTest
             {
                 result = GetConfigFromJSON(jsonString);
             }
-
-            result = GetConfigFromJSON(jsonString);
+           
             RecreateConfig(path, result);
 
             return result;
