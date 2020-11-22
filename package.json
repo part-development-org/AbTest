@@ -1,0 +1,23 @@
+{
+  "name": "com.theproxor.abtest",
+  "version": "1.0.0",
+  "description": "AbTest plugin for unity games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/part-development-org/AbTest.git"
+  },
+  "keywords": [
+    "unity",
+    "abtest"
+  ],
+  "author": "TheProxor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/part-development-org/AbTest/issues"
+  },
+  "homepage": "https://github.com/part-development-org/AbTest#readme"
+}
