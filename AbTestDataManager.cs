@@ -11,7 +11,12 @@ namespace TheProxor.AbTest
     {
         private const string configName = "AbTestConfig.json";
 
+        #if UNITY_EDITOR
+        private string path = Path.Combine(Application.dataPath, configName);
+        #else
         private string path = Path.Combine(Application.persistentDataPath, configName);
+        #endif
+
 
         public T Config { get; private set; }
 
