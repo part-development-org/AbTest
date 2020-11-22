@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.IO;
+﻿using System.IO;
 using UnityEngine;
 using TheProxor.AbTest.Connection;
 
