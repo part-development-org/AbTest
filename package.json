@@ -1,6 +1,6 @@
 {
   "name": "com.theproxor.abtest",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "AbTest plugin for unity games",
   "main": "index.js",
   "scripts": {
