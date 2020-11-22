@@ -67,13 +67,14 @@ namespace TheProxor.AbTest
                 if (string.IsNullOrEmpty(jsonString))
                 {
                     Debug.LogError("AbTest Config  is not found");
-                    CreateConfig(path, result);
                 }
                 else
                 {
                     result = GetConfigFromJSON(jsonString);
                 }
             }
+
+            CreateConfig(path, result);
 
             return result;
         }
