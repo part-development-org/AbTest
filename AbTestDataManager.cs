@@ -39,7 +39,7 @@ namespace TheProxor.AbTest
                 if (string.IsNullOrEmpty(jsonString))
                 {
                     Debug.LogError("AbTest Config  is not found");
-                    CreateConfig(path, result);
+                    RecreateConfig(path, result);
                 }
                 else
                 {
@@ -74,7 +74,7 @@ namespace TheProxor.AbTest
                 }
             }
 
-            CreateConfig(path, result);
+            RecreateConfig(path, result);
 
             return result;
         }
@@ -83,8 +83,13 @@ namespace TheProxor.AbTest
         
         public string LoadConfigFromFile(string path) => File.ReadAllText(path);
 
-        public void CreateConfig(string path, T config)
+        public void RecreateConfig(string path, T config)
         {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+
             File.WriteAllText(path, JsonUtility.ToJson(config, true));
             Debug.Log($"Config was created with path: {path}");
         }
