@@ -4,7 +4,7 @@ using TheProxor.AbTest.Connection;
 
 namespace TheProxor.AbTest
 {
-    public sealed class AbTestDataManager<T> 
+    public sealed class AbTestDataManager<T> where T : new()
     {
         private const string configName = "AbTestConfig.json";
 
@@ -24,7 +24,7 @@ namespace TheProxor.AbTest
 
         public T Load()
         {
-            T result = default;
+            T result = new T();
 
             string jsonString = string.Empty;
 
@@ -52,7 +52,7 @@ namespace TheProxor.AbTest
 
         public T LoadAsync()
         {
-            T result = default;
+            T result = new T();
 
             string jsonString = string.Empty;
 
