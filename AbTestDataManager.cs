@@ -28,24 +28,25 @@ namespace TheProxor.AbTest
 
             string jsonString = string.Empty;
 
-            if(File.Exists(path))
+            if (File.Exists(path))
             {
                 jsonString = LoadConfigFromFile(path);
             }
             else
             {
                 jsonString = AbTestResponseHandler.Get();
-
-                if (string.IsNullOrEmpty(jsonString))
-                {
-                    Debug.LogError("AbTest Config  is not found");
-                    RecreateConfig(path, result);
-                }
-                else
-                {
-                    result = GetConfigFromJSON(jsonString);
-                }
             }
+
+            if (string.IsNullOrEmpty(jsonString))
+            {
+                Debug.LogError("AbTest Config  is not found");
+            }
+            else
+            {
+                result = GetConfigFromJSON(jsonString);
+            }
+
+            RecreateConfig(path, result);
 
             return result;
         }
