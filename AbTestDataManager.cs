@@ -84,7 +84,7 @@ namespace TheProxor.AbTest
 
         public void CreateConfig(string path, T config)
         {
-            File.WriteAllText(path, JsonUtility.ToJson(config));
+            File.WriteAllText(path, JsonUtility.ToJson(config, true));
             Debug.Log($"Config was created with path: {path}");
         }
     }
